@@ -1,9 +1,9 @@
 //
 //  GameScene.swift
-//  Smashing-Orange
+//  Smashing-Things
 //
 //  Created by TILT on 5/13/17.
-//  Copyright © 2017 Patrick. All rights reserved.
+//  Copyright © 2017 Malik. All rights reserved.
 //
 
 import SpriteKit
@@ -11,79 +11,67 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    var orangeTree: SKSpriteNode!
+    var orange: Orange?
+    var touchStart: CGPoint = CGPoint.zero
+    var shapeNode = SKShapeNode()
+    
     
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        addChild(shapeNode)
+        shapeNode.lineWidth = 20
+        shapeNode.lineCap = .round
+        shapeNode.strokeColor = UIColor(white: 1, alpha: 0.3)
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+        //view.showsPhysics = true
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+        // physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        orangeTree = childNode(withName: "OrangeTree") as! SKSpriteNode
+        
+        if let clouds = SKEmitterNode(fileNamed: "CloudEmitter") {
+            addChild(clouds)
+            clouds.position.x = -800
+            clouds.position.y = 300
+            clouds.zPosition = 0
+            clouds.advanceSimulationTime(160)
             
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
         }
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        let touch = touches.first!
+        let location = touch.location(in: self)
+        if atPoint(location).name == "OrangeTree" {
+            orange = Orange()
+            addChild(orange!)
+            orange?.position = location
+            orange?.physicsBody?.isDynamic = false
+            touchStart = location
         }
-        
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        let touch = touches.first!
+        let location = touch.location(in: self)
+        orange?.position = location
+        
+        let path = UIBezierPath()
+        path.move(to: touchStart)
+        path.addLine(to: location)
+        shapeNode.path = path.cgPath
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        let touch = touches.first!
+        let location = touch.location(in: self)
+        let dx = (touchStart.x - location.x)
+        let dy = (touchStart.y - location.y)
+        let vector = CGVector(dx: dx, dy: dy)
+        orange?.physicsBody?.isDynamic = true
+        orange?.physicsBody?.applyImpulse(vector)
+        
+        shapeNode.path = nil
     }
 }

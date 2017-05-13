@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72225451EC7CBF700FECBB3 /* CloudEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = B72225441EC7CBF700FECBB3 /* CloudEmitter.sks */; };
 		B74B28821EC7BC300033BF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B28811EC7BC300033BF54 /* AppDelegate.swift */; };
-		B74B28841EC7BC300033BF54 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B74B28831EC7BC300033BF54 /* GameScene.sks */; };
-		B74B28861EC7BC300033BF54 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B74B28851EC7BC300033BF54 /* Actions.sks */; };
-		B74B28881EC7BC300033BF54 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B28871EC7BC300033BF54 /* GameScene.swift */; };
-		B74B288A1EC7BC300033BF54 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B28891EC7BC300033BF54 /* GameViewController.swift */; };
 		B74B288D1EC7BC300033BF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74B288B1EC7BC300033BF54 /* Main.storyboard */; };
 		B74B288F1EC7BC300033BF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74B288E1EC7BC300033BF54 /* Assets.xcassets */; };
 		B74B28921EC7BC300033BF54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74B28901EC7BC300033BF54 /* LaunchScreen.storyboard */; };
+		B74B289A1EC7BC690033BF54 /* Smashing-Things.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B74B28991EC7BC690033BF54 /* Smashing-Things.atlas */; };
+		B74B289F1EC7BC7E0033BF54 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B74B289B1EC7BC7E0033BF54 /* GameScene.sks */; };
+		B74B28A01EC7BC7E0033BF54 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B289C1EC7BC7E0033BF54 /* GameScene.swift */; };
+		B74B28A11EC7BC7E0033BF54 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B289D1EC7BC7E0033BF54 /* GameViewController.swift */; };
+		B74B28A21EC7BC7E0033BF54 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B289E1EC7BC7E0033BF54 /* Orange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B72225441EC7CBF700FECBB3 /* CloudEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CloudEmitter.sks; sourceTree = "<group>"; };
 		B74B287E1EC7BC300033BF54 /* Smashing-Orange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smashing-Orange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74B28811EC7BC300033BF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B74B28831EC7BC300033BF54 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B74B28851EC7BC300033BF54 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		B74B28871EC7BC300033BF54 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		B74B28891EC7BC300033BF54 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B74B288C1EC7BC300033BF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B74B288E1EC7BC300033BF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B74B28911EC7BC300033BF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B74B28931EC7BC300033BF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74B28991EC7BC690033BF54 /* Smashing-Things.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "Smashing-Things.atlas"; sourceTree = "<group>"; };
+		B74B289B1EC7BC7E0033BF54 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B74B289C1EC7BC7E0033BF54 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B74B289D1EC7BC7E0033BF54 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B74B289E1EC7BC7E0033BF54 /* Orange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 			children = (
 				B74B28801EC7BC300033BF54 /* Smashing-Orange */,
 				B74B287F1EC7BC300033BF54 /* Products */,
+				B74B28991EC7BC690033BF54 /* Smashing-Things.atlas */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,14 +66,15 @@
 			isa = PBXGroup;
 			children = (
 				B74B28811EC7BC300033BF54 /* AppDelegate.swift */,
-				B74B28831EC7BC300033BF54 /* GameScene.sks */,
-				B74B28851EC7BC300033BF54 /* Actions.sks */,
-				B74B28871EC7BC300033BF54 /* GameScene.swift */,
-				B74B28891EC7BC300033BF54 /* GameViewController.swift */,
+				B74B289B1EC7BC7E0033BF54 /* GameScene.sks */,
+				B74B289C1EC7BC7E0033BF54 /* GameScene.swift */,
+				B74B289D1EC7BC7E0033BF54 /* GameViewController.swift */,
+				B74B289E1EC7BC7E0033BF54 /* Orange.swift */,
 				B74B288B1EC7BC300033BF54 /* Main.storyboard */,
 				B74B288E1EC7BC300033BF54 /* Assets.xcassets */,
 				B74B28901EC7BC300033BF54 /* LaunchScreen.storyboard */,
 				B74B28931EC7BC300033BF54 /* Info.plist */,
+				B72225441EC7CBF700FECBB3 /* CloudEmitter.sks */,
 			);
 			path = "Smashing-Orange";
 			sourceTree = "<group>";
@@ -133,11 +139,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72225451EC7CBF700FECBB3 /* CloudEmitter.sks in Resources */,
+				B74B289A1EC7BC690033BF54 /* Smashing-Things.atlas in Resources */,
+				B74B289F1EC7BC7E0033BF54 /* GameScene.sks in Resources */,
 				B74B288D1EC7BC300033BF54 /* Main.storyboard in Resources */,
-				B74B28841EC7BC300033BF54 /* GameScene.sks in Resources */,
 				B74B288F1EC7BC300033BF54 /* Assets.xcassets in Resources */,
 				B74B28921EC7BC300033BF54 /* LaunchScreen.storyboard in Resources */,
-				B74B28861EC7BC300033BF54 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74B28881EC7BC300033BF54 /* GameScene.swift in Sources */,
-				B74B288A1EC7BC300033BF54 /* GameViewController.swift in Sources */,
+				B74B28A01EC7BC7E0033BF54 /* GameScene.swift in Sources */,
+				B74B28A11EC7BC7E0033BF54 /* GameViewController.swift in Sources */,
 				B74B28821EC7BC300033BF54 /* AppDelegate.swift in Sources */,
+				B74B28A21EC7BC7E0033BF54 /* Orange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45FLNDFB7E;
 				INFOPLIST_FILE = "Smashing-Orange/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malik.Smashing-Orange";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,6 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45FLNDFB7E;
 				INFOPLIST_FILE = "Smashing-Orange/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malik.Smashing-Orange";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +326,7 @@
 				B74B28981EC7BC300033BF54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

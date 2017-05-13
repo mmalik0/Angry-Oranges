@@ -1,9 +1,9 @@
 //
 //  GameViewController.swift
-//  Smashing-Orange
+//  Smashing-Things
 //
 //  Created by TILT on 5/13/17.
-//  Copyright © 2017 Patrick. All rights reserved.
+//  Copyright © 2017 Malik. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = GameScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
